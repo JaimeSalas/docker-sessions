@@ -1,3 +1,12 @@
+## Install Windows
+
+Utilizar permisos administrador / client business
+
+- https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+- `wsl --set-default-version 2`
+
+## Summary
+
 - cgroups
     - memory, blkio, CPU
 - namespaces
