@@ -61,7 +61,7 @@ docker -d --rm -p 8080:8080 -e MY_ENV="foo" <name_image>
 - `-p` mapeo de puertos
 - `-e` Varaibles de entorno
 
-## RUN vs CMS vs ENTRYPOINT
+## RUN vs CMD vs ENTRYPOINT
 
 - **RUN** Ejecuta comandos y/o genera nuevas capas -> Instalización de software
 - **CMD** Establece el comando por defecto o los parámetros para el comando por defecto -> override
