@@ -1,0 +1,21 @@
+# Base image
+FROM ubuntu:latest
+
+# Defining environment variables
+ENV LANGUAGE es_ES
+ENV HTTP_PORT 80
+
+# Chaning the work directory
+WORKDIR /opt
+
+# Copying files into the image
+COPY example.txt .
+ADD server.py .
+ADD https://github.com/coder/repo/mix.exs .
+RUN cargo build
+
+# Exposing Ports
+EXPOSE 5555 8989 ${HTTP_PORT}
+
+# Command
+CMD [ "python3", "server.py" ]  
