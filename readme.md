@@ -75,3 +75,30 @@ Tanto CMD como RUN trabajan en dos formatos `SHELL` (/bin/sh -c executable) o `E
 | CMD ["exec_cmd", "p1_cmd"] |       exec_cmd p1_cmd      | /bin/sh -c exec_entry p1_entry |       exec_entry p1_entry exec_cmd p1_cmd      |
 | CMD ["p1_cmd", "p2_cmd"]   |        p1_cmd p2_cmd       | /bin/sh -c exec_entry p1_entry |        exec_entry p1_entry p1_cmd p2_cmd       |
 |     CMD exec_cmd p1_cmd    | /bin/sh -c exec_cmd p1_cmd | /bin/sh -c exec_entry p1_entry | exec_entry p1_entry /bin/sh -c exec_cmd p1_cmd |
+
+## Networking
+
+## Volumes
+
+- `bind mount` -> El punto de montaje host
+- `volume` -> Gestionado Docker
+- `tmpfs` 
+
+### Volumes Syntax
+
+- `-v`
+- `--mount`
+
+```bash
+docker run -d \
+    --mount source=myvol,target=/app \
+    nginx
+```
+
+```bash
+docker run -d \
+    -v myvol:/app \
+    nginx
+```
+
+`--volumes-from`
