@@ -4,7 +4,7 @@ WORKDIR /opt/app
 
 COPY . .
 
-RUN npm i --only=production
+RUN npm ci --only=production
 
 ENV MESSAGE=build
 
