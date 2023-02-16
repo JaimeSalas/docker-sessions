@@ -26,9 +26,9 @@ docker pull <image>
     - `RUN` 
     - `COPY`
     - `ADD` - Localizaciones remotas - https://......
-    - `ENV` - valor por defecto de variables de entorno - override en timepo de ejecución
+    - `ENV` - valor por defecto de variables de entorno - override en tiempo de ejecución
     - `WORKDIR` 
-    - `EXPOSE` - Metadata para definir en que puertos escucah nuestra APP
+    - `EXPOSE` - Metadata para definir en que puertos escucha nuestra APP
     - `ENTRYPOINT`
     - `CMD`
     - `USER`
@@ -62,6 +62,8 @@ docker -d --rm -p 8080:8080 -e MY_ENV="foo" <name_image>
 - `-e` Varaibles de entorno
 
 ## RUN vs CMD vs ENTRYPOINT
+
+Tanto CMD como RUN trabajan en dos formatos `SHELL` (/bin/sh -c executable) o `EXEC` (executable)
 
 - **RUN** Ejecuta comandos y/o genera nuevas capas -> Instalización de software
 - **CMD** Establece el comando por defecto o los parámetros para el comando por defecto -> override
